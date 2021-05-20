@@ -24,7 +24,7 @@
 .section-about::before {
   content: '';
   position: absolute;
-  background-color: #2d2c2ca6;
+  background-color: #1f1f1faf;
   left: 0;
   right: 50%;
   top: 0;
@@ -60,12 +60,17 @@
 }
 
 @media (max-width: 767px) {
+  .section-about::before {
+    right: 0;
+  }
+
   .section-about__img {
     width: 100%;
   }
 
   .section-about__container {
     justify-content: center;
+    z-index: 100;
   }
   
   .section-about__content {
