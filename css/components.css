@@ -520,7 +520,7 @@
   height: 40px;
   width: 3px;
   position: absolute;
-  border-radius: 10px;
+  border: 10px;
   top: 50%;
 }
 
