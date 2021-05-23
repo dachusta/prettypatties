@@ -18,7 +18,7 @@
   width: 50%;
   height: 100%;
   object-fit: cover;
-  z-index: 10;
+  z-index: 5;
 }
 
 .section-about::before {
@@ -29,7 +29,7 @@
   right: 50%;
   top: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 10;
 }
 
 .section-about__content {
@@ -70,7 +70,7 @@
 
   .section-about__container {
     justify-content: center;
-    z-index: 100;
+    z-index: 10;
   }
   
   .section-about__content {

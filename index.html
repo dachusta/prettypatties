@@ -85,23 +85,23 @@
       <nav class="catalog-nav">
         <ul class="catalog-nav__wrapper">
           <li class="catalog-nav__item">
-            <button class="catalog-nav__btn is-active" type="button">все</button>
+            <button class="catalog-nav__btn is-active" type="button" data-filter="all">все</button>
           </li>
           <li class="catalog-nav__item">
-            <button class="catalog-nav__btn" type="button">курица</button>
+            <button class="catalog-nav__btn" type="button" data-filter="chicken">курица</button>
           </li>
           <li class="catalog-nav__item">
-            <button class="catalog-nav__btn" type="button">говядина</button>
+            <button class="catalog-nav__btn" type="button" data-filter="beef">говядина</button>
           </li>
           <li class="catalog-nav__item">
-            <button class="catalog-nav__btn" type="button">вега</button>
+            <button class="catalog-nav__btn" type="button" data-filter="veg">вега</button>
           </li>
         </ul>
       </nav >
     </div>
 
     <div class="catalog">
-      <div class="catalog__item">
+      <div class="catalog__item" data-category="chicken">
         <div class="product catalog__product">
           <img src="img/catalog/01.png" alt="" class="product__img">
           <div class="product__content">
@@ -124,7 +124,7 @@
           </div>
         </div>
       </div>
-      <div class="catalog__item">
+      <div class="catalog__item" data-category="beef">
         <div class="product catalog__product">
           <img src="img/catalog/02.png" alt="" class="product__img">
           <div class="product__content">
@@ -147,7 +147,7 @@
           </div>
         </div>
       </div>
-      <div class="catalog__item">
+      <div class="catalog__item" data-category="beef">
         <div class="product catalog__product">
           <img src="img/catalog/03.png" alt="" class="product__img">
           <div class="product__content">
@@ -170,7 +170,7 @@
           </div>
         </div>
       </div>
-      <div class="catalog__item">
+      <div class="catalog__item" data-category="veg">
         <div class="product catalog__product">
           <img src="img/catalog/04.png" alt="" class="product__img">
           <div class="product__content">
@@ -193,7 +193,7 @@
           </div>
         </div>
       </div>
-      <div class="catalog__item">
+      <div class="catalog__item" data-category="beef">
         <div class="product catalog__product">
           <img src="img/catalog/05.png" alt="" class="product__img">
           <div class="product__content">
@@ -216,7 +216,7 @@
           </div>
         </div>
       </div>
-      <div class="catalog__item">
+      <div class="catalog__item" data-category="beef">
         <div class="product catalog__product">
           <img src="img/catalog/06.png" alt="" class="product__img">
           <div class="product__content">
@@ -239,7 +239,7 @@
           </div>
         </div>
       </div>
-      <div class="catalog__item">
+      <div class="catalog__item" data-category="chicken">
         <div class="product catalog__product">
           <img src="img/catalog/07.png" alt="" class="product__img">
           <div class="product__content">
@@ -262,7 +262,7 @@
           </div>
         </div>
       </div>
-      <div class="catalog__item">
+      <div class="catalog__item" data-category="beef">
         <div class="product catalog__product">
           <img src="img/catalog/08.png" alt="" class="product__img">
           <div class="product__content">
@@ -285,7 +285,7 @@
           </div>
         </div>
       </div>
-      <div class="catalog__item">
+      <div class="catalog__item" data-category="beef">
         <div class="product catalog__product">
           <img src="img/catalog/09.png" alt="" class="product__img">
           <div class="product__content">
@@ -334,7 +334,7 @@
     </div>
     <div class="contacts">
       <div class="contacts__start">
-        <div class="contacts__map"></div>
+        <div class="contacts__map" id="ymap"></div>
       </div>
       <div class="contacts__end">
         <div class="contacts__item">
@@ -470,14 +470,14 @@
         <div class="order">
           <img class="order__img" src="img/catalog/01.png" alt="">
           <h3 class="order__title">
-            <span>Чикенбургер</span>
-            <span>190</span> &#8381;
+            <span class="order-product-title">Чикенбургер</span>
+            <span class="order-product-price">190</span> &#8381;
           </h3>
           <p class="order__size">300г</p>
           <form class="form">
-            <input type="hidden" name="бургер">
-            <input type="hidden" name="цена">
-            <input type="hidden" name="вес">
+            <input class="order-info-title" type="hidden" name="бургер">
+            <input class="order-info-price" type="hidden" name="цена">
+            <input class="order-info-size" type="hidden" name="вес">
             <input class="form__input" type="text" name="имя" placeholder="Имя" required>
             <input class="form__input" type="text" name="телефон" placeholder="Телефон" required>
             <input class="form__input" type="text" name="адрес" placeholder="Адрес" required>
@@ -522,10 +522,16 @@
 </div>
 <!-- /.popup-error -->
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU" type="text/javascript"></script>
+
   <script src="js/myLib.js"></script>
   <script src="js/header.js"></script>
   <script src="js/popup.js"></script>
   <script src="js/scrollTo.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/map.js"></script>
+  
 
 </body>
 </html>
