@@ -15,7 +15,7 @@
             balloonContent: 'г. Санкт-Петербург, Садовая, 7'
         }, {
             iconLayout: 'default#image',
-            iconImageHref: '../img/marker.svg',
+            iconImageHref: './img/marker.svg',
             iconImageSize: [40, 63.2],
             iconImageOffset: [-50, -38]
         });
