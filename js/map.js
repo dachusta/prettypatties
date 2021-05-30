@@ -16,8 +16,8 @@
         }, {
             iconLayout: 'default#image',
             iconImageHref: './img/marker.svg',
-            iconImageSize: [40, 63.2],
-            iconImageOffset: [-50, -38]
+            iconImageSize: [70, 70],
+            iconImageOffset: [-30, -70]
         });
 
     myMap.geoObjects.add(myPlacemark);
